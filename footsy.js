@@ -42,6 +42,15 @@ createChart(ctx2, "bar");
 var ctx = document.getElementById("myChart").getContext("2d");
 var ctx2 = document.getElementById("myBarChart").getContext("2d");
 
+    function getPushItem(array, item){
+        return	{
+	        value: parseFloat(( 100 * array[item].change / array[item].price).toFixed(2)),
+                color: colors[item].color,
+                highlight: colors[item].highlight,
+                label: array[item].name + " (%)"
+            };
+    }
+
 function createChart(canvas, type){
 
 var top = allTheThings.sort(function(a, b){
@@ -53,14 +62,7 @@ if(type == "pie"){
     for(var j = 0; j < 10; j ++){
         data.push(getPushItem(top, j));
     }
-    function getPushItem(array, item){
-        return	{
-	        value: parseFloat(( 100 * array[item].change / array[item].price).toFixed(2)),
-                color: colors[item].color,
-                highlight: colors[item].highlight,
-                label: array[item].name + " (%)"
-            };
-    }
+
     var myPieChart = new Chart(canvas).Pie(data);
 }
 
