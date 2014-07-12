@@ -88,7 +88,7 @@ h3{
   
   .panel-box{
   margin:auto;
-  max-width: 1000px;
+  max-width: 1100px;
   padding: 20px;
   }
   
@@ -146,4 +146,11 @@ span.item{
 
 .img-container img{
     border: black 1px solid;
+}
+
+.info-panel{
+	display: inline-block;
+	margin: 30px;
+	text-align: center;
+	vertical-align: top;
 }
