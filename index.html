@@ -24,20 +24,25 @@
   <div id="panel1" class="panel">
     <div class="panel-box">
       <h1>Footsies</h1>
-      <h2>Displaying FTSE100 information</h2>
+      <h2>For financial information</h2>
     </div>
   </div>
 
   <div id="panel2" class="panel">
     <div class="panel-box">
 	<div class="info-panel">
-		<h1>Top 10 winners pie</h1>
+		<h1>Top 10 FTSE100 winners pie</h1>
  		<canvas id="myChart" width="400" height="400"></canvas>
       	</div>
 	<div class="info-panel">
-		<h1>Top 10 winners bar</h1>
+		<h1>Top 10 FTSE100 winners bar</h1>
  		<canvas id="myBarChart" width="500" height="500"></canvas>
       	</div>
+	<div class="info-panel">
+		<h1>Get company info from number</h1>
+		<input id="CompanyNumber"/><button id="GetCompanyDetails">Search Companies House</button>
+		<div id="CompanyDetails"></div>
+	</div>
     </div>
   </div>
   
@@ -51,6 +56,7 @@
 </div>
 
 <script src="footsy.js"></script>
+<script src="companies.js"></script>
 
 </body>
 
